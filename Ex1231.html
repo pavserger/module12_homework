@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <h1></h1>
+<script defer> 
+
+
+alert("Перечесления свойств объекта."); 
+
+const testObj = {
+  a1:55,
+  a2:'hi',
+  a3:'хорошо' 
+};
+function nameProp(obj){
+  
+ 
+  for (let prop in obj){
+    
+    
+    if (obj.hasOwnProperty(prop)){
+      console.log(prop)
+    }
+   
+  }
+  
+};
+nameProp(testObj)
+</script>
+</body>
+</html>

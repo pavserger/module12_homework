@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <h1></h1>
+<script defer> 
+alert("Объекты: электроприбор, лампа, компьютер"); 
+// создание объекта прибор
+const vswitch = 'off';
+function Devise (vswitch) {
+ this.vswitch =vswitch;
+};
+// создание объекта лампа
+function Lamp(power,vswich) {
+ this.power = power;
+ this.vswich = vswich;
+}
+Lamp.prototype = new Devise();
+// создание объекта комп
+function Comp(power,vswich) {
+ this.power = power;
+ this.vswich = vswich;
+}
+Comp.prototype = new Devise();
+
+const lamp = new Lamp(200,'on');
+const comp = new Comp(300,'on');
+
+allPower = 0;
+console.log(lamp);
+if (lamp.vswich=='on'){
+  allPower= allPower + lamp.power
+}
+
+if (comp.vswich=='on'){
+  allPower= allPower+ comp.power
+}
+
+alert("общее потребление "+allPower); 
+
+</script>
+</body>
+</html>

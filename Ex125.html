@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <h1></h1>
+<script defer> 
+alert("Классы: электроприбор, лампа, компьютер"); 
+// создание класса прибор
+class  Devise {
+ constructor (vswitch) {
+ this.vswitch = vswitch;
+ }
+}
+
+// создание класса лампа
+class Lamp extends Devise {
+constructor (power,vswitch) {
+  super (vswitch);
+  this.power = power;
+ 
+ }
+}
+
+// создание класса комп
+class Comp  extends Devise {   
+  constructor (power,vswitch) {
+    super (vswitch);
+    this.power = power;
+  }
+}
+
+const lamp_ = new Lamp(200,'on');
+const comp_ = new Comp(300,'on');
+//console.log(lamp_)
+allPower = 0;
+
+if (lamp_.vswitch=='on'){
+  allPower= allPower + lamp_.power
+}
+
+if (comp_.vswitch=='on'){
+  allPower= allPower+ comp_.power
+}
+
+alert("общее потребление "+allPower); 
+
+</script>
+</body>
+</html>
